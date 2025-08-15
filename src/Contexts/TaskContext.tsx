@@ -39,6 +39,8 @@ function TaskProvider({ children }: {children: ReactNode}) {
     const newTask = await response.json() as TaskType
 
     const updatedTasks = [...tasks, newTask]
+
+    alert("Tarea agregada con éxito");
     setTasks(updatedTasks)
     } catch (error) {
         console.error(error)
